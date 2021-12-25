@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>My Web Editor</title>
+    <link rel="stylesheet" href="./styles.css">  
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="header">
+          <h1>My Web Editor</h1>
+        </div>
+      </div>
+      <div class="main">
+        <div class="actions">
+          <div class="action-item">
+            <label for="live" class='checkbox-label'>
+              <input id='live' type="checkbox">
+                Live
+              </label>
+          </div>
+          <div class="action-item">
+            <div class="button" id="run-code">Run</div>
+          </div>
+          <div class="action-item">
+            <div class="button" id="rotate">Rotate</div>
+          </div>
+        </div>
+        <div class="wrappers" id='editor-and-iframe-wrapper'>
+          <div class="editor-wrapper">
+            <div id="editor-container" class="editor" contenteditable="true" autofocus></div>
+          </div>
+          <div class="output-wrapper">
+            <iframe id='iframe-container' class="output"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
