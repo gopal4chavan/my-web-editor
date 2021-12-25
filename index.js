@@ -6,7 +6,17 @@ const rotate = document.getElementById('rotate');
 const wrapper = document.getElementById('editor-and-iframe-wrapper')
 const debounceUpdateUI = debounce(updateFrame, 1000);
 
-const blackListKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']
+const blackListKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
+
+const initialHtml = `
+<html>
+<body>
+<h1>Hello</h1>
+</body>
+</html>
+`
+editorContainer.textContent = initialHtml;
+updateFrame();
 
 runBtn.addEventListener('click', updateFrame);
 checkbox.addEventListener('change', () => {
